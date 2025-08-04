@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { AuthModule } from './modules/auth/auth.module';
+import { CoursesModule } from './modules/courses/courses.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { AuthModule } from './modules/auth/auth.module';
       namingStrategy: new SnakeNamingStrategy(), // 여기서 설정
     }),
     AuthModule,
+    CoursesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
